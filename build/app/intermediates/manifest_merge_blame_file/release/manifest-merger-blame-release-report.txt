@@ -1,0 +1,136 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.task"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="34" />
+9-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml
+10    <!-- Required permissions -->
+11    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+11-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:3:5-81
+11-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:3:22-78
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:4:22-64
+13
+14    <!--
+15         Required to query activities that can process text, see:
+16         https://developer.android.com/training/package-visibility and
+17         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+18         
+19         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+20    -->
+21    <queries>
+21-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:53:5-58:15
+22        <intent>
+22-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:54:9-57:18
+23            <action android:name="android.intent.action.PROCESS_TEXT" />
+23-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:55:13-72
+23-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:55:21-70
+24
+25            <data android:mimeType="text/plain" />
+25-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:56:13-50
+25-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:56:19-48
+26        </intent>
+27    </queries>
+28
+29    <uses-permission android:name="android.permission.VIBRATE" />
+29-->[:flutter_local_notifications] /home/karan/Documents/task/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-66
+29-->[:flutter_local_notifications] /home/karan/Documents/task/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:9:22-63
+30    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+30-->[:flutter_local_notifications] /home/karan/Documents/task/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-77
+30-->[:flutter_local_notifications] /home/karan/Documents/task/build/flutter_local_notifications/intermediates/merged_manifest/release/AndroidManifest.xml:10:22-74
+31
+32    <application
+33        android:name="android.app.Application"
+33-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:8:9-42
+34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+34-->[androidx.core:core:1.6.0] /home/karan/.gradle/caches/transforms-3/284a410c767ad6c7a2b0ffc8d8d85981/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+35        android:icon="@mipmap/ic_launcher"
+35-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:9:9-43
+36        android:label="DevCamp" >
+36-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:7:9-32
+37
+38        <!-- Receiver for local notifications -->
+39        <receiver
+39-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:12:9-14:38
+40            android:name="com.dexterous.flutterlocalnotifications.receivers.ActionReceiver"
+40-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:13:13-92
+41            android:exported="true" />
+41-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:14:13-36
+42
+43        <!-- Main activity -->
+44        <activity
+44-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:17:9-39:20
+45            android:name="com.example.task.MainActivity"
+45-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:18:13-41
+46            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+46-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:23:13-163
+47            android:exported="true"
+47-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:19:13-36
+48            android:hardwareAccelerated="true"
+48-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:24:13-47
+49            android:launchMode="singleTop"
+49-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:20:13-43
+50            android:taskAffinity=""
+50-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:21:13-36
+51            android:theme="@style/LaunchTheme"
+51-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:22:13-47
+52            android:windowSoftInputMode="adjustResize" >
+52-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:25:13-55
+53
+54            <!--
+55                 Specifies an Android theme to apply to this Activity as soon as
+56                 the Android process has started. This theme is visible to the user
+57                 while the Flutter UI initializes. After that, this theme continues
+58                 to determine the Window background behind the Flutter UI.
+59            -->
+60            <meta-data
+60-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:31:13-33:56
+61                android:name="io.flutter.embedding.android.NormalTheme"
+61-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:32:17-72
+62                android:resource="@style/NormalTheme" />
+62-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:33:17-54
+63
+64            <intent-filter>
+64-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:35:13-38:29
+65                <action android:name="android.intent.action.MAIN" />
+65-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:36:17-68
+65-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:36:25-66
+66
+67                <category android:name="android.intent.category.LAUNCHER" />
+67-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:37:17-76
+67-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:37:27-74
+68            </intent-filter>
+69        </activity>
+70
+71        <!--
+72             Don't delete the meta-data below.
+73             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+74        -->
+75        <meta-data
+75-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:43:9-45:32
+76            android:name="flutterEmbedding"
+76-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:44:13-44
+77            android:value="2" />
+77-->/home/karan/Documents/task/android/app/src/main/AndroidManifest.xml:45:13-30
+78
+79        <uses-library
+79-->[androidx.window:window:1.0.0-beta04] /home/karan/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+80            android:name="androidx.window.extensions"
+80-->[androidx.window:window:1.0.0-beta04] /home/karan/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+81            android:required="false" />
+81-->[androidx.window:window:1.0.0-beta04] /home/karan/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+82        <uses-library
+82-->[androidx.window:window:1.0.0-beta04] /home/karan/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+83            android:name="androidx.window.sidecar"
+83-->[androidx.window:window:1.0.0-beta04] /home/karan/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+84            android:required="false" />
+84-->[androidx.window:window:1.0.0-beta04] /home/karan/.gradle/caches/transforms-3/f302e75fb7efd781bcf1a29281c188da/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+85    </application>
+86
+87</manifest>

@@ -1,0 +1,4 @@
+#Fri Sep 13 23:26:22 IST 2024
+base.0=/home/karan/Documents/task/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
