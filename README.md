@@ -28,6 +28,17 @@ I have also implemented the notification functionality. It basically uses the lo
 -  It currently display notification only when we click on the floating action button on homepage. 
 -  The notifications include hardcoded messages.
 
+## Navigation
+I have successfully implemented navigation across the app. 
+
+## Good Programming Practices
+I have tried to keep the code as modularised as possible.
+- I have seperated the screen and logic file for each task.
+- I have made some widgets such as navbar and action button sharable across the whole app
+- I have maintained a consistent theme for the whole app.
+
+This is the directory structure of the app. 
+![Directory Structure](assets/structure.png)
 
 
 ## How to Run the App
